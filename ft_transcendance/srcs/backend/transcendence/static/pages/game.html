@@ -1,0 +1,29 @@
+<link href="/static/css/game-buttons.css" rel="stylesheet">
+<div class="buttons-container">  
+    <button class="btn btn-primary game-btn" id="soloBtn">
+      <img src="static/images/solo.png" alt="Solo" class="btn-icon">
+      Jouer en solo
+    </button> 
+    <button class="btn btn-success game-btn" id="multiBtn">
+      <img src="static/images/multi.png" alt="Multi" class="btn-icon">
+      Jouer à plusieurs
+    </button> 
+  </div>
+  
+  <div id="loadingMessage"></div>
+  <div id="game" style="display: none;">
+    <div id="gameContainer" class="mt-4">
+      <div id="countdown">Starting in 3</div>
+      <div id="scoreboard">
+        <div id="score1">0</div>
+        <div id="score2">0</div>
+      </div>
+      <div id="playerNames">
+        <div id="playerA"></div>
+        <div id="playerB"></div>
+      </div>
+      <div id="gameCanvas"></div>
+      <div id="winScreen"></div>
+      <div id="rule">First to 7 Wins</div>
+    </div>
+  </div>

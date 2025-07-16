@@ -1,0 +1,52 @@
+/* Styles pour les boutons de jeu côte à côte et cohérents */
+.buttons-container {
+  display: flex;
+  flex-direction: row;      /* Arrangement horizontal */
+  justify-content: center;  /* Centrage horizontal */
+  gap: 30px;                /* Espace entre les boutons */
+  margin: 40px auto;
+  width: 100%;              /* Utiliser toute la largeur disponible */
+}
+
+/* Style commun pour tous les boutons */
+.buttons-container .btn {
+  width: 220px !important;             /* Largeur fixe identique */
+  height: 200px !important;            /* Hauteur fixe identique */
+  padding: 30px 20px !important;       /* Padding intérieur */
+  font-size: 1.4rem !important;        /* Taille de police */
+  font-weight: bold !important;        /* Gras */
+  border-radius: 10px !important;      /* Coins arrondis */
+  border: none !important;             /* Pas de bordure */
+  display: flex !important;
+  flex-direction: column !important;   /* Image au-dessus du texte */
+  align-items: center !important;      /* Centrage horizontal du contenu */
+  justify-content: center !important;  /* Centrage vertical du contenu */
+  transition: transform 0.2s, box-shadow 0.3s !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Effet de survol pour tous les boutons */
+.buttons-container .btn:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Style spécifique pour le bouton Solo */
+.buttons-container .btn-primary {
+  background: linear-gradient(145deg, #2563eb, #3b82f6) !important;
+  color: white !important;
+}
+
+/* Style spécifique pour le bouton Multijoueur */
+.buttons-container .btn-success {
+  background: linear-gradient(145deg, #16a34a, #22c55e) !important;
+  color: white !important;
+}
+
+/* Style pour les icônes */
+.buttons-container .btn img {
+  width: 64px !important;         /* Icônes plus grandes */
+  height: 64px !important;
+  margin-bottom: 20px !important; /* Espace entre l'icône et le texte */
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2)) !important;
+}

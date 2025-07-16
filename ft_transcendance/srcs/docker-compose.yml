@@ -1,0 +1,50 @@
+services:
+
+  postgresql:
+    image: postgresql
+    container_name: postgresql
+    build:
+      context: ./postgreSQL
+      dockerfile: Dockerfile
+    volumes:
+      - postgresql:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - mynetwork
+    restart: always
+    env_file:
+      - .env
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready", "-d", "db_prod"]
+      interval: 3s
+      timeout: 10s
+      retries: 5
+      start_period: 1s
+
+  transcendence:
+    image:  transcendence
+    container_name: transcendence
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    volumes:
+      - ./backend:/code
+    ports:
+      - "8000:8000"
+    networks:
+      - mynetwork
+    restart:  always
+    env_file:
+      - .env
+    depends_on:
+      postgresql:
+        condition: service_healthy
+
+volumes:
+  postgresql:
+
+networks:
+  mynetwork:
+    driver: bridge
+    name: mynetwork
