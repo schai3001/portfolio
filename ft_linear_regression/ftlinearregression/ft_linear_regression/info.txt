@@ -1,0 +1,53 @@
+Python good choice for machine learning task
+
+Data handling and numerical computation:
+
+- NumPy for efficient array operations and mathematical functions
+- Pandas for data loading and preprocessing if you're working with CSV files
+
+Visualization for debugging:
+
+- Matplotlib for creating plots of your data, cost function, and training progress
+- Seaborn for more polished statistical visualizations
+You can easily plot things like scatter plots of your features vs prices, the cost function over iterations, and predicted vs actual values
+
+Manual implementation friendly:
+
+- Python's syntax makes it straightforward to implement gradient descent from scratch
+- NumPy provides the mathematical operations you need (dot products, gradients) without implementing the actual algorithm for you
+
+
+Program 1 - Prediction:
+
+- Predicts car price for given mileage
+- Uses the formula: estimatePrice(mileage) = θ0 + (θ1 * mileage)
+- Initially θ0 and θ1 are set to 0
+- Should prompt for mileage input and output estimated price
+
+Need to program a prediction tool : input = mileage, output = estimated price using my training model
+
+Car price predictor with dataset
+
+estimateprice = ax + b 
+x = mileage
+a = theta1
+b = theta0
+y = prix voiture
+
+
+θ0 (theta0) = Y-intercept
+
+- The price when kilometers = 0 (a brand new car)
+- Where your line crosses the Y-axis
+
+θ1 (theta1) = Slope
+
+- How much the price changes for each additional kilometer
+- For cars, this will be negative (more km = lower price)
+
+
+
+
+
+
+
